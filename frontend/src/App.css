@@ -1,0 +1,21 @@
+body {
+  background-color: #111111;
+}
+.st0 {
+  fill: none;
+  stroke: #455a64;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st1 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.xrp {
+  width: 25px;
+}
