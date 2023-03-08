@@ -11,7 +11,8 @@ export const GreyH4Title = styled.h2`
 export const CryptoTbl = styled.table`
     background:black;
     color:white;
-    width:100%;
+    width:80%;
+    margin:auto;
     border-radius:10px;
     border:1px solid grey;
     tr {

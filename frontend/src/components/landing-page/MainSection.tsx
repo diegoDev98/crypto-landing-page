@@ -8,6 +8,9 @@ import CryptoTable from './crypto-chart/CryptoTable';
 import WhyUsSection from './why-us-section/WhyUsSection';
 import Stats from './stats-section/Stats';
 import { Logo, NavBar, NavLink, NavLinkContainer } from '../../styles/nav';
+import Footer from '../footer/Footer';
+import ConnectWalletCard from './connect-wallet-card/ConnectWalletCard';
+import OKBLogo from '../../assets/OKBLogo';
 const MainSection = () => {
     const [scrollPos, setScrollPos] = useState(0);
 
@@ -30,7 +33,7 @@ const MainSection = () => {
     return (
         <>
         <NavBar>
-          <Logo>Adze.<sub>Design</sub></Logo>
+          <Logo>Diego.<sub>Design</sub></Logo>
           <NavLinkContainer>
             <li><NavLink href="">Solutions</NavLink></li>
             <li><NavLink href="">Tools</NavLink></li>
@@ -70,7 +73,7 @@ const MainSection = () => {
                     <XRPLogo/>
                 </CryptoCircle>
                 <div  style={{position:'relative', top:'200px', left:'50px'}}>
-                <CryptoCircle style={{ transform: `translate(${-(circleCenterX + circleRadius * Math.cos(scrollPos / 100))}px, ${-(circleCenterY + circleRadius * Math.sin(scrollPos / 100))}px) rotate(${scrollPos / 100}deg)` }} width="64px" height="50px"  beforeBg="white" afterBackground="linear-gradient(-50deg, #a423bc 0%,#9a22d6 80%);" afterTranslateY="25%" afterWidth="100px" afterHeight="100px" afterZIndex="1" beforeZIndex="2" >
+                <CryptoCircle style={{ transform: `translate(${-(circleCenterX + circleRadius * Math.cos(scrollPos / 100))}px, ${-(circleCenterY + circleRadius * Math.sin(scrollPos / 100))}px) rotate(${scrollPos / 2}deg)` }} width="64px" height="50px"  beforeBg="white" afterBackground="linear-gradient(-50deg, #a423bc 0%,#9a22d6 80%);" afterTranslateY="25%" afterWidth="100px" afterHeight="100px" afterZIndex="1" beforeZIndex="2" >
                     <AmpLogo/>
                 </CryptoCircle>
                 <CryptoCircle style={{ transform: `translate(${-(circleCenterX + circleRadius * Math.cos(scrollPos / 100))}px, ${-(circleCenterY + circleRadius * Math.sin(scrollPos / 100))}px) rotate(${scrollPos / 100}deg)` }} width="40px" height="40px"  background="#1111118c" zIndex="-2"afterBackground="linear-gradient(-50deg,#a423bc26 0%,#9a22d629 80%);" afterWidth="75px" afterHeight="75px" afterZIndex="-1" afterTranslateY="20%" left="64px" bottom="72px" beforeBg="black" beforeWidth="100%" beforeZIndex="-1">
@@ -80,11 +83,14 @@ const MainSection = () => {
                 <CryptoCircle style={{ transform: `translate(${-(circleCenterX + circleRadius * Math.cos(scrollPos / 100))}px, ${-(circleCenterY + circleRadius * Math.sin(scrollPos / 100))}px) rotate(${scrollPos / 100}deg)` }} width="80px" height="80px"  bottom="150px" right="50px" background="linear-gradient(20deg, #b424b6 0%,#111111 80%);" border="15px solid #111111" afterWidth="135px" afterHeight="135px" afterTranslateY="20%" afterBackground="linear-gradient(-135deg,#111111 0%,#111111 10%,#5a1447 80%);" afterZIndex="-1">
                     <TronLogo/>
                 </CryptoCircle>
+                <CryptoCircle style={{ transform: `translate(${-(circleCenterX + 500 * Math.cos(scrollPos / 300))}px, ${-(circleCenterY + 500 * Math.sin(scrollPos / 300))}px) rotate(${scrollPos / 3}deg)` }} width="80px" height="80px"  top="260px" right="250px" background="linear-gradient(20deg, #b424b6 0%,#111111 80%);" border="15px solid #111111" afterWidth="135px" afterHeight="135px" afterTranslateY="20%" afterBackground="linear-gradient(-135deg,#111111 0%,#111111 30%,#5a1447 80%);" afterZIndex="-1">
+                    <OKBLogo/>
+                </CryptoCircle>
                 
             </MainRightCont>
             
         </MainContainer>
-
+        <ConnectWalletCard/>
         <TradesContentContainer>
             <TradesDiv>
                 <h2>All-time trade volume</h2>
@@ -95,11 +101,12 @@ const MainSection = () => {
                 <h4>$4,683,048,9441</h4>
             </TradesDiv>
         </TradesContentContainer>
-        <div style={{height:'1600px'}}>
+        <div>
             <CryptoTable></CryptoTable>
             <WhyUsSection></WhyUsSection>
             <Stats/>
         </div>
+        <Footer/>
         </>
     );
 };

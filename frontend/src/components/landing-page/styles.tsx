@@ -181,7 +181,7 @@ export const CryptoCircle = styled.div`
 export const TradesContentContainer = styled.div`
   display:flex;
   justify-content:space-evenly;
-  margin-top:300px;
+  margin-top:200px;
   @media only screen and (max-width:1150px){
     gap:20px;
     div {
